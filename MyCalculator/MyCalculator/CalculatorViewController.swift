@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CalculatorViewController.swift
 //  MyCalculator
 //
 //  Created by 백종운 on 2021/01/15.
@@ -7,7 +7,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CalculatorViewController: UIViewController {
+    
     
     //MARK: Properties
     private var calculator = Calculator()
