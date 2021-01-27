@@ -9,7 +9,6 @@ import UIKit
 
 class CalculatorViewController: UIViewController {
     
-    
     //MARK: Properties
     private var calculator = Calculator()
     private var isUserTypingNumber = false
@@ -20,14 +19,35 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var display: UILabel!
     @IBOutlet weak var clearButton: UIButton!
     
-    //MARK: Initializers
+    //MARK: Initialization
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        updateUI()
+        updateHiddenButtons()
+    }
+
+    //MARK: Life Cycles
+    override func viewDidLayoutSubviews() {
+        updateHiddenButtons()
+    }
+    
+    //MARK: Methods
+    func updateUI() {
         body.layer.cornerRadius = 16
         body.layer.masksToBounds = true
     }
-
+    
+    func updateHiddenButtons() {
+        let isHiddenButtons = view.bounds.width < view.bounds.height * 2
+        
+        for subview in view.subviews[0].subviews {
+            if let buttonsStackView = subview as? ButtonsStackView {
+                buttonsStackView.hiddenButtons(6, isHiddenButtons)
+            }
+        }
+    }
+    
     //MARK: IBActions
     @IBAction func pressClearButton() {
         switch clearButton.currentTitle {

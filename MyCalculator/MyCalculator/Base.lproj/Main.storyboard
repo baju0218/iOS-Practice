@@ -39,7 +39,7 @@
                                         </subviews>
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="LxF-bA-ogE">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="LxF-bA-ogE" customClass="ButtonsStackView" customModule="MyCalculator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="168" width="1350" height="167.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5o-5t-Ams">
@@ -137,7 +137,7 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="F0R-kk-wzG">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="F0R-kk-wzG" customClass="ButtonsStackView" customModule="MyCalculator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="336.5" width="1350" height="167"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Naz-em-LCP">
@@ -249,7 +249,7 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="0n7-va-n1B">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="0n7-va-n1B" customClass="ButtonsStackView" customModule="MyCalculator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="504.5" width="1350" height="167"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9rJ-cp-Yk4">
@@ -364,7 +364,7 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="OVm-jf-DWy">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="OVm-jf-DWy" customClass="ButtonsStackView" customModule="MyCalculator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="672.5" width="1350" height="167.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="teU-9h-Fzm">
@@ -476,7 +476,7 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="rUj-z1-q1y">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="rUj-z1-q1y" customClass="ButtonsStackView" customModule="MyCalculator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="841" width="1350" height="167"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xn-dh-ncj">
@@ -583,14 +583,14 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.34901961679999999" green="0.33725491169999999" blue="0.33725491169999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstItem="4xn-dh-ncj" firstAttribute="width" secondItem="JGB-XT-0lS" secondAttribute="width" id="CT3-QT-co5"/>
-                                    <constraint firstItem="Rzx-cp-cao" firstAttribute="width" secondItem="JGB-XT-0lS" secondAttribute="width" id="IuP-Mh-Dg7"/>
-                                    <constraint firstItem="Snl-iX-Wv0" firstAttribute="width" secondItem="JGB-XT-0lS" secondAttribute="width" id="Kbo-gt-VMt"/>
-                                    <constraint firstItem="weV-O3-PGs" firstAttribute="width" secondItem="JGB-XT-0lS" secondAttribute="width" id="SNP-vs-OZX"/>
-                                    <constraint firstItem="6I0-3K-hXL" firstAttribute="width" secondItem="JGB-XT-0lS" secondAttribute="width" id="YUl-4D-xHb"/>
-                                    <constraint firstItem="aYW-f2-A7M" firstAttribute="width" secondItem="JGB-XT-0lS" secondAttribute="width" id="cIq-1y-Hcd"/>
-                                    <constraint firstItem="TR8-xz-Mto" firstAttribute="width" secondItem="JGB-XT-0lS" secondAttribute="width" id="cV6-b1-3iR"/>
-                                    <constraint firstItem="Tbp-EX-2hs" firstAttribute="width" secondItem="JGB-XT-0lS" secondAttribute="width" id="iZN-zW-apN"/>
+                                    <constraint firstItem="Snl-iX-Wv0" firstAttribute="width" secondItem="TdW-tv-Bek" secondAttribute="width" id="GH8-J3-faa"/>
+                                    <constraint firstItem="Tbp-EX-2hs" firstAttribute="width" secondItem="i32-W0-EK2" secondAttribute="width" id="XDx-ZV-XpV"/>
+                                    <constraint firstItem="weV-O3-PGs" firstAttribute="width" secondItem="ZuU-Su-8VA" secondAttribute="width" id="Xh1-Q6-ShL"/>
+                                    <constraint firstItem="6I0-3K-hXL" firstAttribute="width" secondItem="a1B-sF-iUc" secondAttribute="width" id="Y9Y-zN-4Kz"/>
+                                    <constraint firstItem="Rzx-cp-cao" firstAttribute="width" secondItem="je0-Nr-hOx" secondAttribute="width" id="boJ-2h-Cg4"/>
+                                    <constraint firstItem="TR8-xz-Mto" firstAttribute="width" secondItem="rUj-0b-Wvk" secondAttribute="width" id="h1t-Qg-mMR"/>
+                                    <constraint firstItem="aYW-f2-A7M" firstAttribute="width" secondItem="x7N-of-EV8" secondAttribute="width" id="jSh-wy-wvg"/>
+                                    <constraint firstItem="4xn-dh-ncj" firstAttribute="width" secondItem="teU-9h-Fzm" secondAttribute="width" id="pJX-2p-EL5"/>
                                 </constraints>
                             </stackView>
                         </subviews>
