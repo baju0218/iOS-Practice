@@ -14,6 +14,8 @@
 		14340D9B25BFD52F001EDE4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14340D9925BFD52F001EDE4F /* Main.storyboard */; };
 		14340D9D25BFD530001EDE4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14340D9C25BFD530001EDE4F /* Assets.xcassets */; };
 		14340DA025BFD530001EDE4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14340D9E25BFD530001EDE4F /* LaunchScreen.storyboard */; };
+		14AD65DD25C1381D007B0C34 /* DetailSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD65DC25C1381D007B0C34 /* DetailSignUpViewController.swift */; };
+		14AD65E025C13845007B0C34 /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD65DF25C13845007B0C34 /* UserInformation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		14340D9C25BFD530001EDE4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14340D9F25BFD530001EDE4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14340DA125BFD530001EDE4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14AD65DC25C1381D007B0C34 /* DetailSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSignUpViewController.swift; sourceTree = "<group>"; };
+		14AD65DF25C13845007B0C34 /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +62,16 @@
 		14340D9225BFD52F001EDE4F /* MySignUp */ = {
 			isa = PBXGroup;
 			children = (
+				14340DA125BFD530001EDE4F /* Info.plist */,
+				14340D9C25BFD530001EDE4F /* Assets.xcassets */,
 				14340D9325BFD52F001EDE4F /* AppDelegate.swift */,
 				14340D9525BFD52F001EDE4F /* SceneDelegate.swift */,
+				14340D9E25BFD530001EDE4F /* LaunchScreen.storyboard */,
+				14340D9925BFD52F001EDE4F /* Main.storyboard */,
 				14340D9725BFD52F001EDE4F /* LoginViewController.swift */,
 				1415454525C10DBF00F37394 /* SignUpViewController.swift */,
-				14340D9925BFD52F001EDE4F /* Main.storyboard */,
-				14340D9C25BFD530001EDE4F /* Assets.xcassets */,
-				14340D9E25BFD530001EDE4F /* LaunchScreen.storyboard */,
-				14340DA125BFD530001EDE4F /* Info.plist */,
+				14AD65DC25C1381D007B0C34 /* DetailSignUpViewController.swift */,
+				14AD65DF25C13845007B0C34 /* UserInformation.swift */,
 			);
 			path = MySignUp;
 			sourceTree = "<group>";
@@ -141,6 +147,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				14340D9825BFD52F001EDE4F /* LoginViewController.swift in Sources */,
+				14AD65E025C13845007B0C34 /* UserInformation.swift in Sources */,
+				14AD65DD25C1381D007B0C34 /* DetailSignUpViewController.swift in Sources */,
 				14340D9425BFD52F001EDE4F /* AppDelegate.swift in Sources */,
 				1415454625C10DBF00F37394 /* SignUpViewController.swift in Sources */,
 				14340D9625BFD52F001EDE4F /* SceneDelegate.swift in Sources */,
@@ -290,6 +298,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MySignUp/MySignUp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZLJ3894WL2;
 				INFOPLIST_FILE = MySignUp/Info.plist;
@@ -309,6 +318,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MySignUp/MySignUp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZLJ3894WL2;
 				INFOPLIST_FILE = MySignUp/Info.plist;
