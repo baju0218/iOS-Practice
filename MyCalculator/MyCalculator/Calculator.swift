@@ -124,11 +124,6 @@ class Calculator {
                 result = binaryOperationInfo!.binaryFunction(binaryOperationInfo!.firstOperand, value)
                 binaryOperationInfo = nil
             }
-        case .MemoryOperation:
-            
-            
-            
-            break
         }
             
         return result

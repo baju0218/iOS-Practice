@@ -7,27 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1479572E25BA32AE00FF4100 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1479572D25BA32AE00FF4100 /* AppDelegate.swift */; };
-		1479573025BA32AE00FF4100 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1479572F25BA32AE00FF4100 /* SceneDelegate.swift */; };
-		1479573225BA32AE00FF4100 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1479573125BA32AE00FF4100 /* ViewController.swift */; };
-		1479573525BA32AE00FF4100 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1479573325BA32AE00FF4100 /* Main.storyboard */; };
-		1479573725BA32AF00FF4100 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1479573625BA32AF00FF4100 /* Assets.xcassets */; };
-		1479573A25BA32AF00FF4100 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1479573825BA32AF00FF4100 /* LaunchScreen.storyboard */; };
+		14AA2FB025BEF6C800B49E25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AA2FAF25BEF6C800B49E25 /* AppDelegate.swift */; };
+		14AA2FB225BEF6C800B49E25 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AA2FB125BEF6C800B49E25 /* SceneDelegate.swift */; };
+		14AA2FB425BEF6C800B49E25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AA2FB325BEF6C800B49E25 /* ViewController.swift */; };
+		14AA2FB725BEF6C800B49E25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14AA2FB525BEF6C800B49E25 /* Main.storyboard */; };
+		14AA2FB925BEF6C900B49E25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14AA2FB825BEF6C900B49E25 /* Assets.xcassets */; };
+		14AA2FBC25BEF6C900B49E25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14AA2FBA25BEF6C900B49E25 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1479572A25BA32AE00FF4100 /* MyLaboratory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLaboratory.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1479572D25BA32AE00FF4100 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1479572F25BA32AE00FF4100 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1479573125BA32AE00FF4100 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1479573425BA32AE00FF4100 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1479573625BA32AF00FF4100 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1479573925BA32AF00FF4100 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		1479573B25BA32AF00FF4100 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14AA2FAC25BEF6C800B49E25 /* MyMusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14AA2FAF25BEF6C800B49E25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		14AA2FB125BEF6C800B49E25 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		14AA2FB325BEF6C800B49E25 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		14AA2FB625BEF6C800B49E25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		14AA2FB825BEF6C900B49E25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		14AA2FBB25BEF6C900B49E25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		14AA2FBD25BEF6C900B49E25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1479572725BA32AE00FF4100 /* Frameworks */ = {
+		14AA2FA925BEF6C800B49E25 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,71 +37,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1479572125BA32AE00FF4100 = {
+		14AA2FA325BEF6C800B49E25 = {
 			isa = PBXGroup;
 			children = (
-				1479572C25BA32AE00FF4100 /* MyLaboratory */,
-				1479572B25BA32AE00FF4100 /* Products */,
+				14AA2FAE25BEF6C800B49E25 /* MyMusicPlayer */,
+				14AA2FAD25BEF6C800B49E25 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		1479572B25BA32AE00FF4100 /* Products */ = {
+		14AA2FAD25BEF6C800B49E25 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1479572A25BA32AE00FF4100 /* MyLaboratory.app */,
+				14AA2FAC25BEF6C800B49E25 /* MyMusicPlayer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1479572C25BA32AE00FF4100 /* MyLaboratory */ = {
+		14AA2FAE25BEF6C800B49E25 /* MyMusicPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				1479572D25BA32AE00FF4100 /* AppDelegate.swift */,
-				1479572F25BA32AE00FF4100 /* SceneDelegate.swift */,
-				1479573125BA32AE00FF4100 /* ViewController.swift */,
-				1479573325BA32AE00FF4100 /* Main.storyboard */,
-				1479573625BA32AF00FF4100 /* Assets.xcassets */,
-				1479573825BA32AF00FF4100 /* LaunchScreen.storyboard */,
-				1479573B25BA32AF00FF4100 /* Info.plist */,
+				14AA2FAF25BEF6C800B49E25 /* AppDelegate.swift */,
+				14AA2FB125BEF6C800B49E25 /* SceneDelegate.swift */,
+				14AA2FB325BEF6C800B49E25 /* ViewController.swift */,
+				14AA2FB525BEF6C800B49E25 /* Main.storyboard */,
+				14AA2FB825BEF6C900B49E25 /* Assets.xcassets */,
+				14AA2FBA25BEF6C900B49E25 /* LaunchScreen.storyboard */,
+				14AA2FBD25BEF6C900B49E25 /* Info.plist */,
 			);
-			path = MyLaboratory;
+			path = MyMusicPlayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1479572925BA32AE00FF4100 /* MyLaboratory */ = {
+		14AA2FAB25BEF6C800B49E25 /* MyMusicPlayer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1479573E25BA32AF00FF4100 /* Build configuration list for PBXNativeTarget "MyLaboratory" */;
+			buildConfigurationList = 14AA2FC025BEF6C900B49E25 /* Build configuration list for PBXNativeTarget "MyMusicPlayer" */;
 			buildPhases = (
-				1479572625BA32AE00FF4100 /* Sources */,
-				1479572725BA32AE00FF4100 /* Frameworks */,
-				1479572825BA32AE00FF4100 /* Resources */,
+				14AA2FA825BEF6C800B49E25 /* Sources */,
+				14AA2FA925BEF6C800B49E25 /* Frameworks */,
+				14AA2FAA25BEF6C800B49E25 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = MyLaboratory;
-			productName = MyLaboratory;
-			productReference = 1479572A25BA32AE00FF4100 /* MyLaboratory.app */;
+			name = MyMusicPlayer;
+			productName = MyMusicPlayer;
+			productReference = 14AA2FAC25BEF6C800B49E25 /* MyMusicPlayer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		1479572225BA32AE00FF4100 /* Project object */ = {
+		14AA2FA425BEF6C800B49E25 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
-					1479572925BA32AE00FF4100 = {
+					14AA2FAB25BEF6C800B49E25 = {
 						CreatedOnToolsVersion = 12.3;
 					};
 				};
 			};
-			buildConfigurationList = 1479572525BA32AE00FF4100 /* Build configuration list for PBXProject "MyLaboratory" */;
+			buildConfigurationList = 14AA2FA725BEF6C800B49E25 /* Build configuration list for PBXProject "MyMusicPlayer" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -109,55 +109,55 @@
 				en,
 				Base,
 			);
-			mainGroup = 1479572125BA32AE00FF4100;
-			productRefGroup = 1479572B25BA32AE00FF4100 /* Products */;
+			mainGroup = 14AA2FA325BEF6C800B49E25;
+			productRefGroup = 14AA2FAD25BEF6C800B49E25 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1479572925BA32AE00FF4100 /* MyLaboratory */,
+				14AA2FAB25BEF6C800B49E25 /* MyMusicPlayer */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1479572825BA32AE00FF4100 /* Resources */ = {
+		14AA2FAA25BEF6C800B49E25 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1479573A25BA32AF00FF4100 /* LaunchScreen.storyboard in Resources */,
-				1479573725BA32AF00FF4100 /* Assets.xcassets in Resources */,
-				1479573525BA32AE00FF4100 /* Main.storyboard in Resources */,
+				14AA2FBC25BEF6C900B49E25 /* LaunchScreen.storyboard in Resources */,
+				14AA2FB925BEF6C900B49E25 /* Assets.xcassets in Resources */,
+				14AA2FB725BEF6C800B49E25 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1479572625BA32AE00FF4100 /* Sources */ = {
+		14AA2FA825BEF6C800B49E25 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1479573225BA32AE00FF4100 /* ViewController.swift in Sources */,
-				1479572E25BA32AE00FF4100 /* AppDelegate.swift in Sources */,
-				1479573025BA32AE00FF4100 /* SceneDelegate.swift in Sources */,
+				14AA2FB425BEF6C800B49E25 /* ViewController.swift in Sources */,
+				14AA2FB025BEF6C800B49E25 /* AppDelegate.swift in Sources */,
+				14AA2FB225BEF6C800B49E25 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1479573325BA32AE00FF4100 /* Main.storyboard */ = {
+		14AA2FB525BEF6C800B49E25 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1479573425BA32AE00FF4100 /* Base */,
+				14AA2FB625BEF6C800B49E25 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		1479573825BA32AF00FF4100 /* LaunchScreen.storyboard */ = {
+		14AA2FBA25BEF6C900B49E25 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1479573925BA32AF00FF4100 /* Base */,
+				14AA2FBB25BEF6C900B49E25 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -165,7 +165,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		1479573C25BA32AF00FF4100 /* Debug */ = {
+		14AA2FBE25BEF6C900B49E25 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -226,7 +226,7 @@
 			};
 			name = Debug;
 		};
-		1479573D25BA32AF00FF4100 /* Release */ = {
+		14AA2FBF25BEF6C900B49E25 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -281,38 +281,38 @@
 			};
 			name = Release;
 		};
-		1479573F25BA32AF00FF4100 /* Debug */ = {
+		14AA2FC125BEF6C900B49E25 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZLJ3894WL2;
-				INFOPLIST_FILE = MyLaboratory/Info.plist;
+				INFOPLIST_FILE = MyMusicPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.MyLaboratory;
+				PRODUCT_BUNDLE_IDENTIFIER = com.baek.MyMusicPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		1479574025BA32AF00FF4100 /* Release */ = {
+		14AA2FC225BEF6C900B49E25 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZLJ3894WL2;
-				INFOPLIST_FILE = MyLaboratory/Info.plist;
+				INFOPLIST_FILE = MyMusicPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.MyLaboratory;
+				PRODUCT_BUNDLE_IDENTIFIER = com.baek.MyMusicPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -322,25 +322,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1479572525BA32AE00FF4100 /* Build configuration list for PBXProject "MyLaboratory" */ = {
+		14AA2FA725BEF6C800B49E25 /* Build configuration list for PBXProject "MyMusicPlayer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1479573C25BA32AF00FF4100 /* Debug */,
-				1479573D25BA32AF00FF4100 /* Release */,
+				14AA2FBE25BEF6C900B49E25 /* Debug */,
+				14AA2FBF25BEF6C900B49E25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1479573E25BA32AF00FF4100 /* Build configuration list for PBXNativeTarget "MyLaboratory" */ = {
+		14AA2FC025BEF6C900B49E25 /* Build configuration list for PBXNativeTarget "MyMusicPlayer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1479573F25BA32AF00FF4100 /* Debug */,
-				1479574025BA32AF00FF4100 /* Release */,
+				14AA2FC125BEF6C900B49E25 /* Debug */,
+				14AA2FC225BEF6C900B49E25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 1479572225BA32AE00FF4100 /* Project object */;
+	rootObject = 14AA2FA425BEF6C800B49E25 /* Project object */;
 }

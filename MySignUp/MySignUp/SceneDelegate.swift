@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  MyLaboratory
+//  MySignUp
 //
-//  Created by 백종운 on 2021/01/22.
+//  Created by 백종운 on 2021/01/26.
 //
 
 import UIKit

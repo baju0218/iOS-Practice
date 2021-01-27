@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  MyLaboratory
+//  MyMusicPlayer
 //
-//  Created by 백종운 on 2021/01/22.
+//  Created by 백종운 on 2021/01/25.
 //
 
 import UIKit
