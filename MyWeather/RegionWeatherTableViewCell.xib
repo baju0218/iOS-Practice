@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="64" reuseIdentifier="regionWeatherCell" rowHeight="128" id="0nz-Tn-Nyu" customClass="RegionWeatherTableViewCell" customModule="MyWeather" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="565" height="128"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0nz-Tn-Nyu" id="YRS-to-Cyj">
+                <rect key="frame" x="0.0" y="0.0" width="565" height="128"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="deafult_bg" translatesAutoresizingMaskIntoConstraints="NO" id="bQm-vU-eaO">
+                        <rect key="frame" x="36" y="32" width="64" height="64"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="64" id="eEj-l0-cj9"/>
+                            <constraint firstAttribute="height" constant="64" id="eph-Fy-RmA"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Rwk-S4-fti">
+                        <rect key="frame" x="132" y="32" width="401" height="64"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지역" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8c-Xj-dA3">
+                                <rect key="frame" x="0.0" y="0.0" width="401" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="온도 / 습도" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0NF-zr-7QM">
+                                <rect key="frame" x="0.0" y="40" width="401" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="bQm-vU-eaO" firstAttribute="leading" secondItem="YRS-to-Cyj" secondAttribute="leadingMargin" constant="16" id="2nL-rv-uO6"/>
+                    <constraint firstItem="Rwk-S4-fti" firstAttribute="leading" secondItem="bQm-vU-eaO" secondAttribute="trailing" constant="32" id="3Cf-vg-qh7"/>
+                    <constraint firstItem="bQm-vU-eaO" firstAttribute="centerY" secondItem="YRS-to-Cyj" secondAttribute="centerY" id="be4-Rw-Sof"/>
+                    <constraint firstAttribute="trailing" secondItem="Rwk-S4-fti" secondAttribute="trailing" constant="32" id="fj3-Jy-hwW"/>
+                    <constraint firstItem="Rwk-S4-fti" firstAttribute="centerY" secondItem="YRS-to-Cyj" secondAttribute="centerY" id="h3p-Zs-LJj"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="regionLabel" destination="s8c-Xj-dA3" id="VGd-zR-yc2"/>
+                <outlet property="weatherImage" destination="bQm-vU-eaO" id="On9-0i-2o5"/>
+                <outlet property="weatherInfoLabel" destination="0NF-zr-7QM" id="6Zl-H1-qzH"/>
+            </connections>
+            <point key="canvasLocation" x="214" y="455"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="deafult_bg" width="256" height="256"/>
+    </resources>
+</document>
