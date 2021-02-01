@@ -10,18 +10,17 @@ import UIKit
 class ThirdClassTableViewController: UITableViewController {
 
     //MARK: Properties
-    var firstClass = ""
-    var secondClass = ""
-    var thirdClass = [String]()
+    var firstClassName = ""
+    var secondClassName = ""
+    var thirdClasses = [Classification]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationItem.title = firstClass + " " + secondClass
-        thirdClass = KoreaRegion.getThirdClass(firstClass + " " + secondClass) ?? []
+        self.navigationItem.title = firstClassName + " " + secondClassName
         
-        let nibName = UINib(nibName: "RegionWeatherTableViewCell", bundle: nil)
-        tableView.register(nibName, forCellReuseIdentifier: "regionWeatherCell")
+        let nibName = UINib(nibName: "WeatherCell", bundle: nil)
+        tableView.register(nibName, forCellReuseIdentifier: "weatherCell")
     }
 
     // MARK: - Table view data source
@@ -31,52 +30,52 @@ class ThirdClassTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return thirdClass.count
+        return thirdClasses.count
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        self.tableView.estimatedRowHeight = 80
         return 128
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "regionWeatherCell", for: indexPath) as? RegionWeatherTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "weatherCell", for: indexPath) as? WeatherCell
+        let thirdClass = thirdClasses[indexPath.row]
         
-        let pos = KoreaRegion.getPosition(firstClass + " " + secondClass + " " + thirdClass[indexPath.row])
-        if let info = RegionWeather.Info(pos!.0, pos!.1) {
-            cell?.weatherInfoLabel.text = "기온 : " + String(Int(info.temperature ?? 0)) + "도 / 습도 : " + String(Int(info.humidity ?? 0)) + "%"
-            
-            switch info.type {
-            case 0:
-                cell?.weatherImage.image = UIImage(named: "sunny")
-            case 1, 4, 5:
-                cell?.weatherImage.image = UIImage(named: "rainy")
-            case 2, 6:
-                cell?.weatherImage.image = UIImage(named: "cloudy")
-            case 3, 7:
-                cell?.weatherImage.image = UIImage(named: "snowy")
-            default:
-                break
-            }
-        }
+        cell!.information(classification: thirdClass)
         
-        cell?.regionLabel.text = thirdClass[indexPath.row]
-
         return cell!
     }
 
     // MARK: - Navigation
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "thirdToDetail", sender: indexPath)
+        let thirdClass = thirdClasses[indexPath.row]
+        
+        performSegue(withIdentifier: "thirdClassToDetail", sender: thirdClass)
     }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? DetailViewController {
-            if let indexPath = sender as? IndexPath {
-                vc.detailRegion = firstClass + " " + secondClass + " " + thirdClass[indexPath.row]
+        switch segue.identifier {
+        case "thirdClassToDetail":
+            guard let vc = segue.destination as? DetailViewController else {
+                print("prepare error: fail to convert viewController")
+                print(segue.destination)
+                return
             }
+            
+            guard let thirdClass = sender as? Classification else {
+                print("prepare error: fail to convert classification")
+                return
+            }
+            
+            vc.firstClassName = firstClassName
+            vc.secondClassName = secondClassName
+            vc.thirdClassName = thirdClass.name
+            vc.classification = thirdClass
+        default:
+            print("prepare error: invalid segue")
+            print(segue)
+            return
         }
     }
 }

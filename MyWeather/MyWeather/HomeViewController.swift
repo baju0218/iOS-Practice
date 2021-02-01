@@ -10,23 +10,23 @@ import UIKit
 class HomeViewController: UIViewController {
     
     //MARK: Current Time Properties
-    var timer: Timer?
+    var currentTimeTimer: Timer?
     var currentTimeBlink = true
     let currentTimeFormatter1: DateFormatter = {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "ko")
-        formatter.dateFormat = "a h : MM"
+        formatter.dateFormat = "a h : mm"
         return formatter
     }()
     let currentTimeFormatter2: DateFormatter = {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "ko")
-        formatter.dateFormat = "a h   MM"
+        formatter.dateFormat = "a h   mm"
         return formatter
     }()
     
-    //MARK: Update Properties
-    var updateFormatter: DateFormatter = {
+    //MARK: Update Weather Properties
+    var updateWeatherFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "ko")
         formatter.dateStyle = .long
@@ -36,15 +36,18 @@ class HomeViewController: UIViewController {
     
     //MARK: IBOutlets
     @IBOutlet weak var backgroundImage: UIImageView!
+    
     @IBOutlet weak var currentTime: UILabel!
-    @IBOutlet weak var currentRegionView: UIStackView!
-    @IBOutlet weak var currentRegionLabel: UILabel!
-    @IBOutlet weak var currentRegionState: UILabel!
-    @IBOutlet weak var currentRegionTemperature: UILabel!
-    @IBOutlet weak var currentRegionHumidity: UILabel!
-    @IBOutlet weak var recentUpdateLabel: UILabel!
-    @IBOutlet weak var updateButton: UIButton!
-    @IBOutlet weak var updateLoading: UIActivityIndicatorView!
+    
+    @IBOutlet weak var userWeatherView: UIStackView!
+    @IBOutlet weak var userLocationLabel: UILabel!
+    @IBOutlet weak var userTemperatureLabel: UILabel!
+    @IBOutlet weak var userHumidityLabel: UILabel!
+    @IBOutlet weak var userRainfallProbabilityLabel: UILabel!
+    
+    @IBOutlet weak var weatherUpdateLabel: UILabel!
+    @IBOutlet weak var weatherUpdateButton: UIButton!
+    @IBOutlet weak var weatherUpdateLoading: UIActivityIndicatorView!
     
     //MARK: Life Cycles
     override func viewDidLoad() {
@@ -54,56 +57,83 @@ class HomeViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        setupTimer()
+        setupCurrentTimeTimer()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        timer?.invalidate()
+        currentTimeTimer!.invalidate()
     }
     
     //MARK: Methods
     private func setupUI() {
-        // Selected Region UI
-        if UserData.CurrentRegion != nil {
-            
-            // 현재 위치 처리
-            
-        }
-        currentRegionView.layer.cornerRadius = 16
-        currentRegionView.layer.backgroundColor = CGColor(red: 0, green: 0.5, blue: 1, alpha: 0.5)
+        // User Weather UI
+        userWeatherView.layer.cornerRadius = 16
+        userWeatherView.layer.backgroundColor = CGColor(red: 0, green: 0.5, blue: 1, alpha: 0.5)
         
-        // Update UI
-        if UserData.RecentUpdate != nil {
-            recentUpdateLabel.text = updateFormatter.string(from: UserData.RecentUpdate!)
-            self.navigationItem.rightBarButtonItem?.isEnabled = true
+        if let weather = AdministrativeDistrict.Korea?.nextClasses.first?.weather {
+            switch weather.state() {
+            case .Sunny:
+                backgroundImage.image = UIImage(named: "sunny_bg")
+                backgroundImage.contentMode = .scaleToFill
+            case .Cloudy:
+                backgroundImage.image = UIImage(named: "cloudy_bg")
+                backgroundImage.contentMode = .scaleToFill
+            case .Rainy:
+                backgroundImage.image = UIImage(named: "rainy_bg")
+                backgroundImage.contentMode = .scaleToFill
+            case .Snowy:
+                backgroundImage.image = UIImage(named: "snowy_bg")
+                backgroundImage.contentMode = .scaleToFill
+            default:
+                break
+            }
+            
+            if let temperature = weather.temperature() { userTemperatureLabel.text = String(temperature) + "도" }
+            if let humiditiy = weather.humidity() { userHumidityLabel.text = String(humiditiy) + "%" }
+            if let rainfallProbability = weather.rainfallProbability() { userRainfallProbabilityLabel.text = "강수 확률 : " + String(rainfallProbability) + "%" }
         }
         
-        updateButton.isHidden = false
-        updateLoading.stopAnimating()
+        // Weather Update UI
+        if WeatherAPI.recentUpdateDate != nil {
+            weatherUpdateLabel.text = updateWeatherFormatter.string(from: WeatherAPI.recentUpdateDate!)
+            navigationItem.rightBarButtonItem!.isEnabled = true
+        }
+        
+        weatherUpdateButton.isHidden = false
+        weatherUpdateLoading.stopAnimating()
     }
     
-    private func setupTimer() {
-        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
-            guard let blink = self?.currentTimeBlink else { return }
+    private func setupCurrentTimeTimer() {
+        currentTimeTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
+            guard let vc = self else { return }
             
-            if blink { self?.currentTime.text = self?.currentTimeFormatter1.string(from: Date()) }
-            else { self?.currentTime.text = self?.currentTimeFormatter2.string(from: Date()) }
+            if vc.currentTimeBlink { vc.currentTime.text = vc.currentTimeFormatter1.string(from: Date()) }
+            else { vc.currentTime.text = vc.currentTimeFormatter2.string(from: Date()) }
             
-            self?.currentTimeBlink = !(self?.currentTimeBlink ?? true)
+            vc.currentTimeBlink = !vc.currentTimeBlink
         }
-        timer?.fire()
+        
+        currentTimeTimer!.fire()
     }
     
     //MARK: IBActions
-    @IBAction func touchUpUpdateButton(_ sender: UIButton) {
-        updateButton.isHidden = true
-        updateLoading.startAnimating()
+    @IBAction func touchUpWeatherUpdateButton(_ sender: UIButton) {
+        weatherUpdateButton.isHidden = true
+        weatherUpdateLoading.startAnimating()
+        navigationItem.rightBarButtonItem!.isEnabled = false
         
         DispatchQueue.global(qos: .userInitiated).async {
-            RegionWeather.Update()
+            let currentDate = Date()
+            
+            
+            
+            WeatherAPI.Update(classification: AdministrativeDistrict.Korea!)
+            // 업데이트 갯수 세기
+            
+            
             
             DispatchQueue.main.async { [weak self] in
-                UserData.RecentUpdate = Date()
+                WeatherAPI.recentUpdateDate = Date()
                 self?.setupUI()
             }
         }
