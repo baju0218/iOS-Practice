@@ -51,18 +51,18 @@ class AddToDoViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        self.dismiss(animated: true) {
-            if let vc = self.delegate {
-                let inputText = textField.text ?? ""
-                
-                if inputText.isEmpty { return }
-                
-                vc.toDoList.append(ToDo(text: textField.text ?? "", complete: .None))
-                
-                let newIndexPath = IndexPath(row: vc.toDoList.count - 1, section: 0)
-                
-                vc.tableView.insertRows(at: [newIndexPath], with: .middle)
-            }
+        self.dismiss(animated: true)
+        
+        if let vc = self.delegate {
+            let inputText = textField.text ?? ""
+            
+            if inputText.isEmpty { return }
+            
+            vc.toDoList.append(ToDo(text: textField.text ?? "", complete: .None))
+            
+            let newIndexPath = IndexPath(row: vc.toDoList.count - 1, section: 0)
+            
+            vc.tableView.insertRows(at: [newIndexPath], with: .middle)
         }
     }
     
