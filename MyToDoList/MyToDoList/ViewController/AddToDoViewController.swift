@@ -44,7 +44,6 @@ class AddToDoViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.isHidden = true
         textField.resignFirstResponder()
         
         return true
@@ -67,7 +66,6 @@ class AddToDoViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func tapOutside(_ sender: UITapGestureRecognizer) {
-        textField.isHidden = true
         textField.resignFirstResponder()
     }
 }
