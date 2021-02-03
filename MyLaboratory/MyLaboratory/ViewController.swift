@@ -2,21 +2,24 @@
 //  ViewController.swift
 //  MyLaboratory
 //
-//  Created by 백종운 on 2021/01/22.
+//  Created by 백종운 on 2021/02/03.
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
-    
-    
-    @IBOutlet weak var text: UITextField!
-    @IBOutlet weak var label: UILabel!
-    
+
+    static var hi = 0
+    var hi = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        let test = NSEntityDescription
     }
+
+
 }
 
