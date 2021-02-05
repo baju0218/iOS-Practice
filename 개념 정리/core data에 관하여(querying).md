@@ -64,7 +64,11 @@ request 만들고, sortDiscriptor 넣어주고, predicate 넣어주고..
 
 let tweeters = try? context.fetch(request)
 
+옵셔널 array를 반환함 -> 조건이나 소팅이 잘 못 되었다면 nil, 맞는데도 부합하는 데이터가 없다면 빈 array
+
 가져온 데이터가 100만개라 해도 걱정 ㄴㄴ
 array를 가져왔지만 주소값?만 가져온 상태인듯
 실제로 객체 출력해보면 빈 껍데기만 나옴
-객체의 프로퍼티 접근하면 그제서야 생성
+객체의 프로퍼티 접근하면 그제서야 생성 = lazy랑 비슷한듯?
+
+
