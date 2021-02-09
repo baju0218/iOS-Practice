@@ -6,4 +6,5 @@
 2. MyMusicPlayer 끝
 3. MySignUp 끝
 4. MyWeather 끝
-
+5. MyToDoList 80%
+6. MyPhotos 40%
