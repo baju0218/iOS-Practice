@@ -14,11 +14,13 @@ enum Complete {
 }
 
 class ToDo {
-    var text: String
-    var complete: Complete
+    var text: String = ""
+    var time: TimeInterval = 0
+    var complete: Complete = .None
     
-    init(text: String, complete: Complete) {
+    init(text: String, time: TimeInterval, complete: Complete) {
         self.text = text
+        self.time = time
         self.complete = complete
     }
     
@@ -30,8 +32,6 @@ class ToDo {
             complete = .Done
         case .Done:
             complete = .None
-        default:
-            break
         }
     }
 }

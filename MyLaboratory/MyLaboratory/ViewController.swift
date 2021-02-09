@@ -2,25 +2,25 @@
 //  ViewController.swift
 //  MyLaboratory
 //
-//  Created by 백종운 on 2021/02/03.
+//  Created by 백종운 on 2021/02/07.
 //
 
 import UIKit
-import CoreData
 
 class ViewController: UIViewController {
 
-    static var hi = 0
-    var hi = 1
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
-        
-        let test = NSEntityDescription
-        
     }
-
-
+    
+    @IBAction func touchUpInsideButton(_ sender: UIButton) {
+        let textToShare: String = "안녕하세요, 부스트 코스입니다."
+        
+        let activityViewController = UIActivityViewController(activityItems: [textToShare], applicationActivities: [])
+        
+        self.present(activityViewController, animated: true, completion: nil)
+    }
+    
 }
-

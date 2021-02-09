@@ -8,19 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		140C0ADE25CAEF00000B16AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140C0ADD25CAEF00000B16AF /* ViewController.swift */; };
-		140C0AE125CAEF11000B16AF /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140C0AE025CAEF11000B16AF /* TableViewCell.swift */; };
 		140C0AE725CAF1B0000B16AF /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140C0AE625CAF1B0000B16AF /* ToDo.swift */; };
 		143DAC5825CAE85700660282 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143DAC5725CAE85700660282 /* AppDelegate.swift */; };
 		143DAC5A25CAE85700660282 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143DAC5925CAE85700660282 /* SceneDelegate.swift */; };
 		143DAC5F25CAE85700660282 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 143DAC5D25CAE85700660282 /* Main.storyboard */; };
 		143DAC6125CAE85800660282 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 143DAC6025CAE85800660282 /* Assets.xcassets */; };
 		143DAC6425CAE85800660282 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 143DAC6225CAE85800660282 /* LaunchScreen.storyboard */; };
+		144DB61025D2FD460010F317 /* Daily.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144DB60F25D2FD460010F317 /* Daily.swift */; };
+		144DB61525D305E30010F317 /* Saying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144DB61425D305E30010F317 /* Saying.swift */; };
+		144DB61825D30A980010F317 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144DB61725D30A980010F317 /* TimerViewController.swift */; };
 		1460F10D25CAFCB8006BA3AF /* AddToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460F10C25CAFCB8006BA3AF /* AddToDoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		140C0ADD25CAEF00000B16AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		140C0AE025CAEF11000B16AF /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		140C0AE625CAF1B0000B16AF /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		143DAC5425CAE85700660282 /* MyToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		143DAC5725CAE85700660282 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -29,6 +30,9 @@
 		143DAC6025CAE85800660282 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		143DAC6325CAE85800660282 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		143DAC6525CAE85800660282 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		144DB60F25D2FD460010F317 /* Daily.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daily.swift; sourceTree = "<group>"; };
+		144DB61425D305E30010F317 /* Saying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saying.swift; sourceTree = "<group>"; };
+		144DB61725D30A980010F317 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		1460F10C25CAFCB8006BA3AF /* AddToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,22 +52,17 @@
 			children = (
 				140C0ADD25CAEF00000B16AF /* ViewController.swift */,
 				1460F10C25CAFCB8006BA3AF /* AddToDoViewController.swift */,
+				144DB61725D30A980010F317 /* TimerViewController.swift */,
 			);
 			path = ViewController;
-			sourceTree = "<group>";
-		};
-		140C0AE425CAF15B000B16AF /* View */ = {
-			isa = PBXGroup;
-			children = (
-				140C0AE025CAEF11000B16AF /* TableViewCell.swift */,
-			);
-			name = View;
 			sourceTree = "<group>";
 		};
 		140C0AE525CAF167000B16AF /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				140C0AE625CAF1B0000B16AF /* ToDo.swift */,
+				144DB60F25D2FD460010F317 /* Daily.swift */,
+				144DB61425D305E30010F317 /* Saying.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -90,8 +89,6 @@
 				143DAC6D25CAE8C900660282 /* Supporting Files */,
 				140C0AE525CAF167000B16AF /* Model */,
 				140C0AE325CAF14C000B16AF /* ViewController */,
-				140C0AE425CAF15B000B16AF /* View */,
-				143DAC6225CAE85800660282 /* LaunchScreen.storyboard */,
 				143DAC5D25CAE85700660282 /* Main.storyboard */,
 			);
 			path = MyToDoList;
@@ -104,6 +101,7 @@
 				143DAC6525CAE85800660282 /* Info.plist */,
 				143DAC5725CAE85700660282 /* AppDelegate.swift */,
 				143DAC5925CAE85700660282 /* SceneDelegate.swift */,
+				143DAC6225CAE85800660282 /* LaunchScreen.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -180,10 +178,12 @@
 			files = (
 				140C0ADE25CAEF00000B16AF /* ViewController.swift in Sources */,
 				140C0AE725CAF1B0000B16AF /* ToDo.swift in Sources */,
-				140C0AE125CAEF11000B16AF /* TableViewCell.swift in Sources */,
 				143DAC5825CAE85700660282 /* AppDelegate.swift in Sources */,
+				144DB61025D2FD460010F317 /* Daily.swift in Sources */,
+				144DB61825D30A980010F317 /* TimerViewController.swift in Sources */,
 				1460F10D25CAFCB8006BA3AF /* AddToDoViewController.swift in Sources */,
 				143DAC5A25CAE85700660282 /* SceneDelegate.swift in Sources */,
+				144DB61525D305E30010F317 /* Saying.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

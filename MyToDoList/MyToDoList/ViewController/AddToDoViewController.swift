@@ -8,7 +8,7 @@
 import UIKit
 
 class AddToDoViewController: UIViewController, UITextFieldDelegate {
-
+    
     weak var delegate: ViewController?
     
     @IBOutlet weak var textField: UITextField!
@@ -57,11 +57,11 @@ class AddToDoViewController: UIViewController, UITextFieldDelegate {
             
             if inputText.isEmpty { return }
             
-            vc.toDoList.append(ToDo(text: textField.text ?? "", complete: .None))
+            vc.daily.toDo.append(ToDo(text: textField.text ?? "", time: TimeInterval(0), complete: .None))
             
-            let newIndexPath = IndexPath(row: vc.toDoList.count - 1, section: 0)
+            let newIndexPath = IndexPath(row: vc.daily.toDo.count - 1, section: 0)
             
-            vc.tableView.insertRows(at: [newIndexPath], with: .middle)
+            vc.tableView.insertRows(at: [newIndexPath], with: .none)
         }
     }
     
