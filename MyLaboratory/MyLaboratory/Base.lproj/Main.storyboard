@@ -20,7 +20,7 @@
                                 <rect key="frame" x="184" y="433" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="touchUpInsideButton:" destination="ILd-Zb-oUz" eventType="touchUpInside" id="AAb-zy-2m2"/>
+                                    <action selector="touchButton:" destination="ILd-Zb-oUz" eventType="touchUpInside" id="AAb-zy-2m2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -31,6 +31,9 @@
                             <constraint firstItem="b2w-Ia-Wcq" firstAttribute="centerX" secondItem="sac-fB-wDb" secondAttribute="centerX" id="k4S-Z3-RmW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outletCollection property="buttons" destination="b2w-Ia-Wcq" collectionClass="NSMutableArray" id="5Ob-tP-GIX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2rS-PP-aDP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -49,7 +49,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.delegate = self
         
         // load data
-        
         loadDaily(date: dateFormatter.string(from: datePicker.date))
     }
     
@@ -121,6 +120,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             
             tableView.deleteRows(at: [indexPath], with: .none)
         }
+    }
+    
+    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        print(1)
     }
     
     // MARK: IBActions

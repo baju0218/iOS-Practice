@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20C69" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DailyToDoList" representedClassName="DailyToDoList" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="memo" optional="YES" attributeType="String"/>
+        <attribute name="toDoList" optional="YES"/>
+        <relationship name="newRelationship1" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ToDo" inverseName="newRelationship1" inverseEntity="ToDo"/>
+    </entity>
+    <entity name="ToDo" representedClassName="ToDo" syncable="YES" codeGenerationType="class">
+        <attribute name="achievement" optional="YES" attributeType="Transformable"/>
+        <attribute name="text" optional="YES"/>
+        <attribute name="time" optional="YES"/>
+        <relationship name="newRelationship1" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DailyToDoList" inverseName="newRelationship1" inverseEntity="DailyToDoList"/>
+    </entity>
+    <elements>
+        <element name="DailyToDoList" positionX="-224.671875" positionY="-89.03125" width="128" height="103"/>
+        <element name="ToDo" positionX="-0.21875" positionY="-54.2265625" width="128" height="103"/>
+    </elements>
+</model>

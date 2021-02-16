@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="메모를 입력하세요!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mkF-hQ-VFz">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="메모를 입력하세요!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mkF-hQ-VFz">
+                                <rect key="frame" x="0.0" y="484" width="320" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="Ufv-9B-UQO"/>
                                 </constraints>
@@ -30,6 +30,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="wa2-Yp-ier" firstAttribute="bottom" secondItem="mkF-hQ-VFz" secondAttribute="bottom" priority="500" id="5Nb-tU-znc"/>
                             <constraint firstItem="mkF-hQ-VFz" firstAttribute="leading" secondItem="wa2-Yp-ier" secondAttribute="leading" id="VmA-RR-rYV"/>
                             <constraint firstItem="wa2-Yp-ier" firstAttribute="trailing" secondItem="mkF-hQ-VFz" secondAttribute="trailing" id="i8D-VC-aIZ"/>
                         </constraints>
@@ -158,21 +159,21 @@
                                         <rect key="frame" x="0.0" y="237.5" width="320" height="237.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="To Do Cell" textLabel="kGW-wp-RQD" detailTextLabel="pdc-61-CTd" style="IBUITableViewCellStyleSubtitle" id="huY-Kp-xIS">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="To Do Cell" textLabel="95P-Uj-gH2" detailTextLabel="uAn-q8-GCq" style="IBUITableViewCellStyleSubtitle" id="huY-Kp-xIS">
                                                 <rect key="frame" x="0.0" y="28" width="320" height="55.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="huY-Kp-xIS" id="THH-SP-G2g">
-                                                    <rect key="frame" x="0.0" y="0.0" width="280" height="55.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="55.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kGW-wp-RQD">
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="95P-Uj-gH2">
                                                             <rect key="frame" x="16" y="10" width="33" height="20.5"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pdc-61-CTd">
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uAn-q8-GCq">
                                                             <rect key="frame" x="16" y="31.5" width="44" height="14.5"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -180,6 +181,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
                                         </prototypes>
@@ -384,7 +386,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gK3-mo-fRh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2663" y="404"/>
+            <point key="canvasLocation" x="2663" y="464"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="Cib-E1-qHg">
